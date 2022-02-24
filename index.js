@@ -60,5 +60,5 @@ var highScore = {
   score: 7
 }
 
-console.log ("Compare yourself with Highest Scorer: ")
-console.log (highScore.name + "-" +  highScore.score)
+console.log (chalk.inverse("Compare yourself with Highest Scorer: "))
+console.log (chalk.inverse(highScore.name + "-" +  highScore.score))
