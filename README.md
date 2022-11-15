@@ -1,4 +1,7 @@
 # A CLI Quiz App - For Marvel Fans
+To play the quiz you click on this button : [![Room
+Status](https://travis-ci.org/jswanner/markdown-buttons.svg?branch=master)](https://replit.com/@DevKahl/Marvel-Quiz#index.js?embed=1&output=1)  and click on the "Run" button.
+
 ## v2.0
 
 -- The first change I did is to change all the variable declarations from `var` to `let` / `const`
