@@ -1,12 +1,14 @@
-var readlineSync = require ("readline-sync");
-var chalk = require("chalk")
-var score = 0;
-var userName = readlineSync.question ("What is your name? ")
-console.log(chalk.blue("Welcome to the game, ") + chalk.red(userName))
-console.log ("Lets play a Marvel Quiz")
-console.log (" ")
-console.log ("If you answers all correctly, You will go to Next Level. " + "Here goes the first question")
-console.log (" ")
+const readlineSync = require("readline-sync");
+const chalk = require("chalk")
+let score = 0;
+let userWelcome = () => {
+  var userName = readlineSync.question ("What is your name? ")
+  console.log(chalk.blue("Welcome to the game, ") + chalk.red(userName))
+  console.log ("Lets play a Marvel Quiz")
+  console.log (" ")
+  console.log ("If you answers all correctly, You will go to Next Level. " + "Here goes the first question")
+  console.log (" ")
+}
 
 function play (question, answer){
   var userAnswer = readlineSync.question (question)
@@ -40,7 +42,7 @@ var questions = [
   answer: "Scarlet Witch"}
 ]
 
-
+userWelcome()
 for (var i=0; i<questions.length; i++) {
   var quiz = (questions[i])
   play (chalk.yellowBright(quiz.question), quiz.answer)
