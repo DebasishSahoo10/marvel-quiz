@@ -10,20 +10,6 @@ let userWelcome = () => {
   console.log (" ")
 }
 
-function play (question, answer){
-  var userAnswer = readlineSync.question (question)
-  if (userAnswer.toUpperCase() === answer.toUpperCase()){
-  score = score + 1
-  console.log (chalk.greenBright("Holla! you are right"))
-  console.log ("and your score is: " + score)
-  } else {
-  console.log (chalk.red("oops! you are wrong"))
-  console.log ("and your score is: " + score)
-  }
-  console.log ("--------------------")
-}
-
-
 
 var questions = [
   {question: "What is inside the Eye of Agamoto? ",
@@ -43,10 +29,19 @@ var questions = [
 ]
 
 userWelcome()
-for (var i=0; i<questions.length; i++) {
-  var quiz = (questions[i])
-  play (chalk.yellowBright(quiz.question), quiz.answer)
-}
+
+questionDatabase.map((DB) => {
+  const userAnswer = readlineSync.question(DB.question)
+  if (userAnswer.toUpperCase() === DB.answer.toUpperCase()) {
+    score = score + 1
+    console.log(chalk.greenBright("Holla! you are right"))
+    console.log("and your score is: " + score)
+  } else {
+    console.log(chalk.red("oops! you are wrong"))
+    console.log("and your score is: " + score)
+  }
+  console.log("--------------------")
+})
 
 
 
