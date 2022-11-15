@@ -10,5 +10,7 @@
 ## v2.0
 
 -- The first change I did is to change all the variable declarations from `var` to `let` / `const`
+
 -- Then I removed the combination of a Function and For Loop. Instead I used the _MAP_ function to iterate over the database.
+
 -- The last change is to improve code readability. so formed functions to make better readable code blocks. and called all the functions at the end of the code page.
